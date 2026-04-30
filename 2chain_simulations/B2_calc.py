@@ -199,7 +199,7 @@ for temp in temps:
         
         B2_by_T[temp].append(B2_seed_mean)
     
-    print(temp,B2_by_T[temp])
+    #print(temp,B2_by_T[temp])
 temps_arr = np.array(temps, dtype=float)
 
 B2_mean_arr = np.array([
@@ -261,6 +261,9 @@ print(f"Boyle temperature (linear interpolation): {T_boyle:.2f}")
 B2_max=B2_sub[-1]
 B2_mean_norm= B2_sub/B2_max
 B2_std_norm  = err_sub/B2_max
+
+print(B2_max)
+print(B2_mean_norm)
 
 plt.figure(figsize=(8,6), dpi=300)
 plt.errorbar(
